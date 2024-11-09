@@ -1,0 +1,408 @@
+/* Importação da fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+/* Importa a fonte 'Montserrat' do Google Fonts com pesos 300, 500, e 700. 'display=swap' faz a troca de fonte padrão pela personalizada de forma suave. */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* O '*' seleciona todos os elementos da página.
+   Define a margem e o padding de todos os elementos como 0, removendo o espaçamento padrão.
+   'box-sizing: border-box' faz com que padding e bordas sejam incluídos no tamanho total de um elemento, facilitando o cálculo de larguras e alturas. */
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+/* O 'scroll-behavior: smooth' aplica um efeito de rolagem suave sempre que o usuário clicar em um link que leva para uma âncora na mesma página. */
+
+/* Estilos básicos */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #000; /* Define a cor do texto como preto */
+    background-color: #fff; /* Define a cor de fundo como branca */
+    padding-top: 80px; /* Adiciona um padding no topo de 80px, para evitar que o conteúdo fique escondido atrás de um cabeçalho fixo */
+}
+/* Aplica a fonte Montserrat ao corpo da página, define o texto preto e o fundo branco como padrão no modo claro.
+   O 'padding-top' de 80px cria um espaçamento no topo para acomodar o cabeçalho fixo. */
+
+/* Container padrão */
+.container {
+    max-width: 1200px; /* Define a largura máxima do container como 1200px */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 0 20px; /* Adiciona padding lateral de 20px, para afastar o conteúdo das bordas */
+}
+/* O container é uma área centralizada que agrupa o conteúdo principal, limitando sua largura a no máximo 1200px.
+   Se a tela for maior, ele centraliza o conteúdo. O padding nas laterais evita que o conteúdo encoste nas bordas da janela. */
+
+/* Cabeçalho */
+header {
+    background-color: #f8f8f8; /* Define um fundo claro (cinza) para o cabeçalho */
+    padding: 20px 0; /* Adiciona padding vertical de 20px no cabeçalho */
+    position: fixed; /* Mantém o cabeçalho fixo no topo da página ao rolar */
+    width: 100%; /* Faz com que o cabeçalho ocupe 100% da largura da tela */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    z-index: 100; /* Define uma ordem de empilhamento alta para garantir que o cabeçalho fique acima de outros elementos */
+}
+/* O cabeçalho tem um fundo claro, fica fixo no topo da página e ocupa toda a largura da janela. 
+   O 'z-index' garante que ele permaneça sobreposto a outros elementos. */
+
+/* Container dentro do cabeçalho */
+header .container {
+    display: flex; /* Usa Flexbox para distribuir os elementos do cabeçalho (logo e menu) */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+/* O conteúdo do cabeçalho é disposto horizontalmente com espaço entre os elementos usando Flexbox.
+   O alinhamento vertical dos itens é centralizado. */
+
+/* Estilo do logo */
+.logo {
+    font-size: 1.8em; /* Define o tamanho da fonte do logo como 1.8em (um pouco maior que o normal) */
+    font-weight: 700; /* Deixa o logo em negrito (peso 700) */
+    color: #e50914; /* Define a cor do logo como vermelho (#e50914) */
+}
+/* O logo tem uma fonte grande, é destacado com negrito e usa uma cor vermelha para chamar a atenção. */
+
+/* Navegação */
+nav ul {
+    display: flex; /* Usa Flexbox para dispor os itens de navegação horizontalmente */
+    list-style: none; /* Remove os marcadores da lista não ordenada */
+}
+/* O menu de navegação é uma lista não ordenada, sem os pontos ou marcadores típicos das listas, e os itens são dispostos horizontalmente com Flexbox. */
+
+/* Estilo dos itens de navegação */
+nav li {
+    margin-left: 30px; /* Adiciona um espaçamento de 30px à esquerda de cada item da lista */
+}
+/* Espaçamento à esquerda entre cada item de navegação, criando um espaço uniforme. */
+
+/* Estilo dos links de navegação */
+nav a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #000; /* Define a cor do texto dos links como preto */
+    font-weight: 500; /* Define o peso da fonte dos links como médio (500) */
+    transition: color 0.3s; /* Adiciona uma transição suave de cor ao passar o mouse sobre os links */
+}
+/* Remove o sublinhado dos links, define a cor preta e o peso da fonte. 
+   A transição de cor ao passar o mouse é suave (0.3 segundos). */
+
+/* Efeito hover nos links de navegação */
+nav a:hover {
+    color: #e50914; /* Muda a cor dos links para vermelho (#e50914) ao passar o mouse */
+}
+/* Ao passar o mouse sobre os links de navegação, a cor muda suavemente para vermelho. */
+
+/* Banner principal */
+.banner {
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('haiti.jpg') center/cover no-repeat;
+    /* Aplica um gradiente branco semitransparente sobre uma imagem de fundo centralizada e coberta */
+    height: 80vh; /* Define a altura do banner como 80% da altura da janela (viewport height) */
+    display: flex; /* Usa Flexbox para centralizar o conteúdo do banner */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Alinha o texto centralmente */
+}
+/* O banner ocupa 80% da altura da tela e tem uma imagem de fundo coberta por um gradiente semitransparente.
+   O conteúdo do banner é centralizado horizontal e verticalmente com Flexbox. */
+
+/* Conteúdo dentro do banner */
+.banner-conteudo {
+    max-width: 700px; /* Define uma largura máxima de 700px para o conteúdo do banner */
+    padding: 0 20px; /* Adiciona padding lateral de 20px */
+}
+/* Limita a largura do conteúdo do banner a 700px e adiciona espaçamento nas laterais. */
+
+/* Título do banner */
+.banner h2 {
+    font-size: 3em; /* Define o tamanho da fonte do título como 3em (grande) */
+    margin-bottom: 20px; /* Adiciona margem inferior de 20px */
+}
+/* O título do banner tem uma fonte grande e um espaçamento inferior para separá-lo dos outros elementos. */
+
+/* Parágrafo do banner */
+.banner p {
+    font-size: 1.2em; /* Define o tamanho da fonte do parágrafo como 1.2em */
+    margin-bottom: 30px; /* Adiciona margem inferior de 30px */
+}
+/* O parágrafo dentro do banner tem uma fonte moderada e espaçamento abaixo dele. */
+
+/* Estilo dos botões */
+.btn {
+    display: inline-block; /* Faz com que o botão seja um bloco inline */
+    padding: 15px 30px; /* Define o padding do botão (15px vertical e 30px horizontal) */
+    background-color: #e50914; /* Cor de fundo vermelha */
+    color: #fff; /* Texto branco */
+    text-decoration: none; /* Remove o sublinhado do link (se for um link) */
+    border-radius: 5px; /* Bordas arredondadas com raio de 5px */
+    font-weight: 500; /* Define o peso da fonte como médio (500) */
+    transition: background-color 0.3s; /* Transição suave na mudança da cor de fundo ao passar o mouse */
+}
+/* Os botões têm fundo vermelho, texto branco, bordas arredondadas e transição suave de cor ao passar o mouse. */
+
+/* Efeito hover nos botões */
+.btn:hover {
+    background-color: #b00610; /* Muda a cor do fundo para um tom mais escuro de vermelho ao passar o mouse */
+}
+/* Ao passar o mouse sobre o botão, o fundo muda para um vermelho mais escuro. */
+
+/* Seções gerais da página */
+.secao {
+    padding: 60px 20px; /* Define padding de 60px no topo e fundo, e 20px nas laterais */
+}
+/* As seções da página têm espaçamento grande no topo e no fundo, e espaçamento lateral menor. */
+
+/* Títulos das seções */
+.secao h2 {
+    text-align: center; /* Centraliza o texto do título */
+    font-size: 2.5em; /* Define o tamanho da fonte como 2.5em (grande) */
+    margin-bottom: 40px; /* Adiciona margem inferior de 40px */
+    color: #e50914; /* Define a cor do título como vermelho (#e50914) */
+}
+/* Os títulos das seções são grandes, centralizados e com cor vermelha para destaque. */
+
+/* Grade de destaques */
+.grid {
+    display: grid; /* Usa CSS Grid Layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas flexíveis com largura mínima de 250px */
+    gap: 20px; /* Define um espaçamento de 20px entre os itens da grade */
+}
+/* A grade usa o layout Grid para organizar os itens. As colunas se ajustam automaticamente com largura mínima de 250px, e os itens têm espaçamento entre si. */
+
+/* Cartões */
+.card {
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    padding: 20px; /* Padding interno de 20px */
+    border-radius: 8px; /* Bordas arredondadas com raio de 8px */
+    transition: transform 0.3s; /* Transição suave na transformação (movimento) */
+}
+/* Os cartões têm fundo cinza claro, padding interno e bordas arredondadas. Eles se movem suavemente ao interagir. */
+
+.imagem1 {
+    display: none;
+}
+
+.card:hover .imagem1{
+    display: block;
+}
+
+.imagem2 {
+    display: none;
+}
+
+.card:hover .imagem2{
+    display: block;
+}
+
+
+.imagem3 {
+    display: none;
+}
+
+.card:hover .imagem3{
+    display: block;
+}
+
+.imagem4 {
+    display: none;
+}
+
+.card:hover .imagem4{
+    display: block;
+}
+
+
+
+
+/* Efeito hover nos cartões */
+.card:hover {
+    transform: translateY(-10px); /* Move o cartão 10px para cima ao passar o mouse */
+}
+/* Ao passar o mouse sobre os cartões, eles se movem ligeiramente para cima, criando um efeito de flutuação. */
+
+/* Título dos cartões */
+.card-conteudo h3 {
+    margin-bottom: 15px; /* Adiciona margem inferior de 15px */
+}
+/* Os títulos dos cartões têm espaçamento inferior de 15px. */
+
+/* Parágrafos dos cartões */
+.card-conteudo p {
+    color: #e7e4e4e7; /* Define a cor do texto como cinza escuro (#555) */
+}
+/* O texto dos parágrafos dos cartões tem um tom de cinza escuro. */
+
+/* Categorias */
+.cate {
+    display: flex; /* Usa Flexbox para organizar os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas se necessário */
+    justify-content: center; /* Centraliza os itens no eixo horizontal */
+    gap: 15px; /* Define espaçamento de 15px entre os itens */
+}
+/* As categorias são organizadas horizontalmente com Flexbox. Elas podem se quebrar em várias linhas e têm espaçamento entre os itens. */
+
+/* Botões de categoria */
+.catValor {
+    background-color: #e50914; /* Fundo vermelho */
+    color: #fff; /* Texto branco */
+    padding: 10px 20px; /* Padding interno nos botões */
+    border-radius: 30px; /* Bordas arredondadas com raio de 30px */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 500; /* Define o peso da fonte como médio */
+    transition: background-color 0.3s; /* Transição suave na cor de fundo ao interagir */
+}
+/* Os botões de categoria têm fundo vermelho, texto branco e bordas arredondadas. Ao interagir, a cor de fundo muda suavemente. */
+
+/* Efeito hover nas categorias */
+.category:hover {
+    background-color: #b00610; /* Muda o fundo para um vermelho mais escuro ao passar o mouse */
+}
+/* Ao passar o mouse sobre as categorias, o fundo muda para um tom mais escuro de vermelho. */
+
+/* Estilo do formulário */
+form {
+    max-width: 600px; /* Define a largura máxima do formulário como 600px */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+/* O formulário tem largura máxima de 600px e é centralizado na página. */
+
+/* Rótulos dos campos de formulário */
+label {
+    display: block; /* Exibe os rótulos como blocos, ocupando toda a largura */
+    margin-bottom: 5px; /* Adiciona margem inferior de 5px */
+    font-weight: 500; /* Define o peso da fonte como médio (500) */
+}
+/* Os rótulos dos campos de formulário são exibidos como blocos com espaçamento inferior. */
+
+/* Campos de entrada e textarea */
+input, textarea {
+    width: 100%; /* Faz com que os campos ocupem 100% da largura disponível */
+    padding: 15px; /* Define padding interno de 15px */
+    margin-bottom: 20px; /* Adiciona margem inferior de 20px */
+    border: 1px solid #ccc; /* Define uma borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas com raio de 5px */
+    font-size: 1em; /* Define o tamanho da fonte como 1em */
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+}
+/* Os campos de texto ocupam toda a largura, têm bordas arredondadas e fundo branco. */
+
+/* Placeholder dos campos */
+input::placeholder, textarea::placeholder {
+    color: #777; /* Define a cor do placeholder como cinza claro (#777) */
+}
+/* O texto de dica dentro dos campos é exibido em cinza claro. */
+
+/* Foco nos campos */
+input:focus, textarea:focus {
+    outline: 2px solid #e50914; /* Ao focar, a borda muda para um contorno vermelho */
+}
+/* Ao focar em um campo, a borda muda para vermelho, destacando o campo. */
+
+/* Estilo do botão no formulário */
+button {
+    background-color: #e50914; /* Fundo vermelho */
+    color: #fff; /* Texto branco */
+    font-weight: 500; /* Peso da fonte médio */
+    cursor: pointer; /* Define o cursor como ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave na cor de fundo ao interagir */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 15px; /* Padding interno de 15px */
+}
+/* O botão tem fundo vermelho, texto branco, bordas arredondadas e transição suave ao interagir. */
+
+/* Efeito hover no botão */
+button:hover {
+    background-color: #b00610; /* Muda o fundo para um vermelho mais escuro ao passar o mouse */
+}
+/* Ao passar o mouse sobre o botão, o fundo muda para um vermelho mais escuro. */
+
+/* Estilo do rodapé */
+footer {
+    background-color: #f8f8f8; /* Fundo claro (cinza) */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Padding interno de 20px */
+    color: #777; /* Texto cinza claro */
+}
+/* O rodapé tem fundo claro, texto centralizado e espaçamento interno. */
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 2.5em; /* Reduz o tamanho da fonte do título do banner */
+    }
+
+    nav ul {
+        flex-direction: column; /* Transforma a navegação em uma coluna */
+        align-items: center; /* Centraliza os itens do menu */
+    }
+
+    nav li {
+        margin: 10px 0; /* Reduz o espaçamento entre os itens do menu */
+    }
+
+    .banner {
+        height: 60vh; /* Reduz a altura do banner para 60% da altura da tela */
+    }
+
+    .categories {
+        flex-direction: column; /* Organiza as categorias em uma coluna */
+    }
+
+    .category {
+        width: 100%; /* Faz com que os botões de categoria ocupem toda a largura */
+        text-align: center; /* Centraliza o texto dos botões de categoria */
+    }
+}
+/* Regras para telas menores que 768px (smartphones e tablets). 
+   Ajusta o layout da navegação, do banner e das categorias para uma apresentação mais amigável em telas pequenas. */
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #fff; /* Define o texto como branco */
+        background-color: #121212; /* Fundo preto */
+    }
+
+    header {
+        background-color: #1f1f1f; /* Fundo escuro no cabeçalho */
+    }
+
+    nav a {
+        color: #fff; /* Links de navegação ficam brancos no modo escuro */
+    }
+
+    .banner {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('haiti.jpg') center/cover no-repeat;
+        /* Ajusta o gradiente do banner para um fundo preto semitransparente */
+    }
+
+    .card {
+        background-color: #1f1f1f; /* Fundo escuro dos cartões */
+    }
+
+    .card-content p {
+        color: #ccc; /* Texto dos cartões em cinza claro */
+    }
+
+    input, textarea {
+        background-color: #1f1f1f; /* Fundo escuro dos campos de formulário */
+        color: #fff; /* Texto branco */
+        border: 1px solid #444; /* Bordas cinza escuro */
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: #bbb; /* Placeholder cinza claro */
+    }
+
+    footer {
+        background-color: #1f1f1f; /* Fundo escuro no rodapé */
+        color: #bbb; /* Texto cinza claro no rodapé */
+    }
+}
+/* Regras de estilo para o modo escuro. 
+   Se o sistema do usuário estiver configurado para modo escuro, o fundo fica preto, o texto branco, e os elementos se adaptam para um esquema de cores mais escuro. */
